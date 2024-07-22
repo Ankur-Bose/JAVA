@@ -1,0 +1,98 @@
+//Example
+class Example
+{
+  public static void main(String args[])
+  {
+    System.out.println("hello stcet");  
+  }
+}
+
+
+
+//My name print
+class Example
+{
+  public static void main(String args[])
+  {
+    System.out.println("My name is:");
+    System.out.println("Ankur Bose");
+  }
+}
+
+
+
+
+//Operations and printing it in 1 line(change the program)
+class xyz
+{
+	public static void main(String[]args)
+	{
+		int a=10,b=20;
+		int c=a+b;
+		System.out.println("Add "+c);
+		c=a-b;
+		System.out.println("Subtract "+c);
+		c=a*b;
+		System.out.println("Multiplication "+c);
+		c=a/b;
+		System.out.println("Division "+c);
+	}
+}
+
+
+
+
+
+
+//Max-min using if else
+class max
+{
+	public static void main(String[]args)
+	{
+		int a=10,b=5,c=8;
+		System.out.println("The value of 1st variable is "+a);
+		System.out.println("The value of 2nd variable is "+b);
+		System.out.println("The value of 3rd variable is "+c);
+		int max=0,min=0;
+		if(a>b&&a>c&&c>b)
+		{
+			max=a;
+			min=b;
+		}
+		else if(b>a&&b>c&&a>c)
+		{
+			max=b;
+			min=c;
+		}
+		else
+		{
+			max=c;
+			min=a;
+		}
+		System.out.println("The max is "+max);
+		System.out.println("The min is "+min);
+	}
+}
+
+
+
+
+
+
+
+//pattern
+public class Loops
+{
+	public static void main(String[]args)
+	{
+		int i,j;
+		for(i=1;i<=5;i++)
+		{
+			for(j=1;j<=i;j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
