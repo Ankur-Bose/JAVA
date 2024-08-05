@@ -1,0 +1,179 @@
+Q1. Using method
+class bux
+{
+int height, width, depth;
+void setData(int h,int w, int d)
+{
+height = h;
+width = w;
+depth = d;
+}
+int volume()
+{
+return (height*width*depth);
+}
+}
+class demo
+{
+public static void main(String args[])
+{
+bux ob = new bux();
+bux ob1 = new bux();
+ob.setData(1,2,3);
+System.out.println("Volume of box1 "+ob.volume());
+ob1.setData(4,5,6);
+System.out.println("Volume of box2 "+ob1.volume());
+if(ob.volume()>ob1.volume())
+{
+System.out.println("The volume of box 1 is more ");
+}
+else
+{
+System.out.println("The volume of box 2 is more ");
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Q2. using constructor
+class buxx
+{
+int height, width, depth;
+buxx(int h,int w, int d)
+{
+height = h;
+width = w;
+depth = d;
+}
+int volume()
+{
+return (height*width*depth);
+}
+}
+class demon
+{
+public static void main(String args[])
+{
+buxx ob = new buxx(1,2,3);
+buxx ob1 = new buxx(4,5,6);
+System.out.println("Volume of box1 "+ob.volume());
+System.out.println("Volume of box2 "+ob1.volume());
+if(ob.volume()>ob1.volume())
+{
+System.out.println("The volume of box 1 is more ");
+}
+else
+{
+System.out.println("The volume of box 2 is more ");
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q2. Bank needs to be developed well 
+import java.util.*;
+class BankAccount
+{
+	double totalAmount;
+	BankAccount(double amt)
+	{
+		totalAmount=amt;
+	}
+	void withdraw(double amount)
+	{
+		totalAmount=totalAmount-amount;
+	}
+	void deposit(double amount)
+	{
+		totalAmount=totalAmount+amount;
+	}
+	void display()
+	{
+		System.out.println("The amount left is "+totalAmount);
+	}
+}
+
+class bank
+{
+	public static void main(String[]args)
+	{
+		String name;
+		long accno;
+		double balance;
+		char accType;
+		char mod;
+
+		Scanner sc = new Scanner(System.in);
+		Scanner sca = new Scanner(System.in);
+
+		System.out.println("Enter Customer name ");
+		name = sc.nextLine();
+
+		System.out.println("Enter Account number ");
+		accno = sc.nextLong();
+
+		System.out.println("Enter account type 'S' for Saving and 'C' for current ");
+		accType = sca.next().charAt(0);
+
+		System.out.println("Enter Balance ");
+		balance = sc.nextDouble();
+
+		BankAccount ob = new BankAccount(balance);
+
+		System.out.println("Enter 'D' for deposit or 'W' for withdraw ");
+		mod = sca.next().charAt(0);
+
+		if(mod=='D'||mod=='d')
+		{
+			System.out.println("How much you want to deposit ");
+			double dep;
+			dep = sc.nextDouble();
+			ob.deposit(dep);
+			ob.display();
+		}
+		else if(mod=='w'||mod=='W')
+		{
+			System.out.println("How much you want to withdraw ");
+			double wit;
+			wit = sc.nextDouble();
+			ob.withdraw(wit);
+			ob.display();
+		}		
+		else
+		{
+			ob.display();
+		}
+	}
+}
+		
+		
+		
+
+
+	
+	
+
+	
