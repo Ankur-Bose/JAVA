@@ -1,0 +1,185 @@
+Q1. class eg
+
+class Test
+{
+	int a;
+	Test(int i)
+	{
+		a=i;
+	}
+	Test test()
+	{
+		Test temp = new Test(a+10);
+		return temp;
+	}
+}
+
+public class abc
+{
+	public static void main(String[]args)
+	{
+		Test ob = new Test(2);
+		System.out.println(ob.a);
+		Test ob1;
+		ob1 = ob.test();
+		System.out.println(ob1.a);
+		ob1 = ob1.test();
+		System.out.println(ob1.a);
+		ob1 = ob1.test();
+		System.out.println(ob1.a);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+Q2. Diemensions
+
+class Diemension
+{
+	double length, breadth, side;
+	double area(int r)
+	{
+		side = r;
+		double vol = 3.14*side*side;
+		return vol;
+	}
+	double area(double l, double b)
+	{
+		length = l;
+		breadth = b;
+		double vol = length*breadth;
+		return vol;
+	}
+	double area(float s)
+	{
+		side = s;
+		float vol = s*s;
+		return vol;
+	}
+}
+
+public class Q1
+{
+	public static void main(String[]args)
+	{
+		Diemension ob = new Diemension();
+		double a,b;
+		double area_calc;
+		double area1;
+		double area2;
+		double area3;
+		area1 = ob.area(2);
+		area2 = ob.area(5,6);
+		area3 = ob.area(2.35f);
+		System.out.println("The area is "+area1);
+		System.out.println("The area is "+area2);
+		System.out.println("The area is "+area3);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q3. 
+
+
+class Box
+{
+	int len,bre,hei;
+	Box(int l, int b, int h)
+	{
+		len = l;
+		bre = b;
+		hei = h;
+	}
+	Box(int l)
+	{
+		len=bre=hei=l;
+	}
+	Box(Box ob)
+	{
+		len = ob.len;
+		hei = ob.hei;
+		bre = ob.bre;
+	}		
+	void volume()
+	{
+		System.out.println("The volume is "+(len*bre*hei));
+	}
+}
+
+public class Dimen
+{
+	public static void main(String[]args)
+	{
+		Box ob1 = new Box(1,2,3);
+		Box ob2 = new Box(2);
+		Box ob3 = new Box(ob1);
+		ob1.volume();
+		ob2.volume();
+		ob3.volume();
+	}
+}
+		
+		
+
+
+
+
+
+
+Q4. Addiution
+
+
+
+
+class Method
+{
+	void Addition(int a, int b)
+	{
+		int sum = a+b;
+	}
+	void Addition(float a, float b)
+	{
+		float sum = a+b;
+	}
+	void Addition(double a, double b)
+	{
+		double sum = a+b;
+	}
+	void display()
+	{
+		System.out.println("Sum is "+sum);
+	}
+}		
+public class Promote
+{
+	public static void main(String[]args)
+	{
+		byte b = 42;
+		char c = 'c';
+		short s = 1024;
+		int i = 5894;
+		long l = 12200122;
+		float f = 5.89f;
+		double d = 8.994510;
+		System.out.println("The result is "+(b+c+s+i+l+f+d));
+	}
+}
