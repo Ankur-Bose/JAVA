@@ -1,0 +1,74 @@
+//static block & variable
+class Myclass
+{
+	static int IntVariable;
+	static
+	{
+		IntVariable = 10;
+		System.out.println("Static block.... Static variable value is "+IntVariable);
+	}
+
+	public static void main(String[]args)
+	{
+		System.out.println("Value of Static Variable is "+IntVariable);
+	}
+}
+
+
+
+
+
+
+//static method
+class Method
+{
+	static void staticMethod()
+	{
+		System.out.println("This is static");
+	}
+	public static void main(String[]args)
+	{
+		staticMethod();
+	}
+}
+
+
+
+
+
+
+
+//nested class and inner class
+class A
+{
+	static int a = 10;
+	static void test()
+	{
+		B.display();
+	}
+	class B
+	{
+		static int b = 20;
+		static void display()
+		{
+			System.out.println("The value for a "+a);
+		}
+	}
+}
+
+class abc
+{
+	public static void main(String[]args)
+	{
+		A ob1 = new A();
+		ob1.test();
+	}
+}
+
+
+
+
+
+
+
+
